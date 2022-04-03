@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgba(128, 255, 0, 0.398);
+            color: rgb(12, 63, 82);
+            font: normal 50pt Arial;
+            text-align: center;
+            position: relative;
+            padding: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="res"></div>
+    <div id="res1"></div>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var min = agora.getMinutes()
+        var seg = agora.getSeconds()
+        res.innerHTML = `<strong>Agora são ${hora}:${min}:${seg}</strong>`
+        if (hora < 12) {
+            res1.innerHTML = 'Bom dia!'
+        } else if (hora <= 18) {
+            res1.innerHTML += 'Boa tarde!'
+        } else {
+            res1.innerHTML += 'Boa noite!'
+        }
+    </script>
+</body>
+</html>
